@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    font-weight: 900;
+    text-decoration: dotted red underline;
+    letter-spacing: 10px;
+    font-family: Arial;
+}
+
+h2{
+    text-align: left;
+    font-weight: 600;
+    text-decoration:  white line-through;
+}
+
+h3{
+    text-align: start;
+    font-weight: 900;
+    text-decoration: overline red dashed;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+    font-weight: 600;
+    text-align:justify ;
+    line-height: 2.5;
+    font-size: 20px;
+
+}
+
+a{
+    text-decoration: none;
+}
