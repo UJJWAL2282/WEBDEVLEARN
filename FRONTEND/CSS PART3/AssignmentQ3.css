@@ -1,0 +1,4 @@
+li{
+    /* display:inline; this is not correct way */
+    display: inline list-item;
+}
