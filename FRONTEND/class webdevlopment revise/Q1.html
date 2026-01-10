@@ -1,0 +1,62 @@
+   <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Question-1</title>
+
+        <style>
+            .toggle{
+                height:200px;
+                width:200px;
+                background:salmon;
+                border:2px solid black;
+                
+                left:50%;
+                margin-top:30px;
+                box-shadow:2px 2px 3px  black;
+            }
+
+           div{
+            position: absolute;
+            left:50%;
+           }
+
+        </style>
+        
+
+    </head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("body").css("background-color","red");
+           
+            });
+            $("#btn2").click(function(){
+                $("body").css("background-color","blue");
+            });
+            $("#btn3").click(function(){
+                $("body").css("background-color","green");
+            });
+
+            $("#btn4").click(function(){
+                $(".toggle").toggle();
+            });
+
+
+        });
+        
+    </script>
+    <body>
+        <div>
+            <button id="btn1">Red</button>
+            <button id="btn2">blue</button>
+            <button id="btn3">Green</button>
+            <button id="btn4">Toogle</button>
+        </div>
+
+            <div class="toggle"><i>Toggle div </i></div>
+        
+
+        
+    </body>
+</html>

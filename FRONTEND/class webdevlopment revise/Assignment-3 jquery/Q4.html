@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Q4</title>
+</head>
+<body>
+
+    <h1>Jquery get demo</h1>
+
+    <p>This is <i>a</i> paragraph</p>
+    <button id="btn1">Fetch Text</button>
+    <button id="btn2">Fetch Html</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+               alert($("p").text());
+           
+            });
+            $("#btn2").click(function(){
+                alert($("p").html());
+            });
+           
+        });
+    </script>    
+</body>
+</html>

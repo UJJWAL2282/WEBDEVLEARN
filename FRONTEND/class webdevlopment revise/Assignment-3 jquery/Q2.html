@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2</title>
+
+    <style>
+        div{
+                height:200px;
+                width:200px;
+                background:lightblue;
+                border:2px solid black;
+                left:50%;
+                margin-top:30px;
+                box-shadow:2px 2px 3px  black;
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div><b>Div Element</b></div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                $("div").text("Clicked!");
+           
+            });
+            $("div").dblclick(function(){
+                $("div").css("background-color","orange");
+            });
+            $("div").mouseenter(function(){
+                $("div").css("border-color","green");
+            });
+
+            $("div").mouseleave(function(){
+                $("div").css("border-color","black");
+            });
+
+
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Q6</title>
+    <style>
+        .myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: peru;
+            margin: 20px;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .dim {
+            opacity: 0.5;
+        }
+
+       
+    </style>
+    <!-- Load jQuery from CDN -->
+    
+</head>
+<body>
+    <div class="myDiv">Click the Buttons!</div>
+    <button id="btn1">Add Highlight</button>
+    <button id="btn2">Add Dim</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Apply 'highlight' class
+            $("#btn1").click(function () {
+                $(".myDiv").removeClass("dim").addClass("highlight");
+            });
+
+            // Apply 'dim' class
+            $("#btn2").click(function () {
+                $(".myDiv").removeClass("highlight").addClass("dim");
+            });
+        });
+    </script>
+</body>
+</html>

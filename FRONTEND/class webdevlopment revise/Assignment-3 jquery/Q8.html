@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element by ID</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .paragraph {
+            margin: 10px 0;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Remove Element by ID</h1>
+
+    <label for="elementId">Enter ID to Remove:</label>
+    <input type="text" id="elementId" placeholder="Enter paragraph ID">
+    <button id="removeBtn">Remove Element</button>
+
+    <div id="container">
+        <p id="para1" class="paragraph">This is paragraph 1 (ID: para1).</p>
+        <p id="para2" class="paragraph">This is paragraph 2 (ID: para2).</p>
+        <p id="para3" class="paragraph">This is paragraph 3 (ID: para3).</p>
+        <p id="para4" class="paragraph">This is paragraph 4 (ID: para4).</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Remove the element with the ID entered in the text box
+            $("#removeBtn").click(function () {
+                const elementId = $("#elementId").val(); // Get the ID entered
+                
+                    const element = $("#" + elementId); // Select the element by ID
+                    
+                        element.remove(); // Remove the element if it exists
+            });            
+                        
+        });
+    </script>
+
+</body>
+</html>
