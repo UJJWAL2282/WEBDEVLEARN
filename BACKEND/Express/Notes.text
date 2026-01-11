@@ -1,0 +1,40 @@
+>>>__1>>>Library vs Framework
+
+---->>Library
+
+A library is a collection of pre-written code that can be used to perform specific tasks.
+
+eg.axios
+
+
+---->>Framework
+
+
+A framework is a set of pre-written code that provides a structure for developing software applications.
+
+eg.express
+
+
+A node.js web application framework that helps us to make web applications
+
+It is used for server side programming.
+
+goole.com/search ---> / ke baad likha huaa route kahte hai
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// expess kaa use kaar ke 4 chiz
+
+1.listen for upcoming request
+
+2.pause
+
+3.match response with routs
+
+4.response
+
+//expess npm me exist kartaa hai ohaa se install kaar sakte hai
+
+
+
+yaha ke baad saab video and other file se padho
