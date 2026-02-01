@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET AND POST REQUEST</title>
+</head>
+<body>
+    <h3>GET request Form</h3>
+    <form method="get" action="http://localhost:8080/register">
+        <input placeholder="Enter Username" name="user" type="text">
+        <input placeholder="Enter Password" name="pass" type="password">
+        <button>Submit</button>
+    </form>
+
+    <hr>
+
+    <h3>POST Request Form</h3>
+    <form method="Post" action="http://localhost:8080/register"> 
+        <!--Method btaa raha kis form me request jayegaa jaab submit hogaa and data url me nahi dikhegaa-->
+        <input placeholder="Enter Username" name="user" type="text">
+        <input placeholder="Enter Password" name="pass" type="password">
+        <button>Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
