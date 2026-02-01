@@ -1,0 +1,13 @@
+//---->>>>GET and POST Request---------------------
+
+//GET 
+
+->Used to GET some response
+->Data sent in query strings (limited ,string data and visible in URL)
+
+
+//POST
+
+->Used POST something (for Create/write/update)
+->Data sent via request body (any type of data)
+
