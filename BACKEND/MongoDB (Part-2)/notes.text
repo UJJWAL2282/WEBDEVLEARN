@@ -1,0 +1,5 @@
+------------------------Mongoose-------------------------------------------------
+
+A library that creates a connection between MongoDb & Node.js javaScript Runtime Enviroment
+
+It is an ODM(object Data Modeling) Library.
