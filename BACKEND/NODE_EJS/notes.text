@@ -1,0 +1,13 @@
+----------------------Templating------------------------------------------------
+
+-->>>>EJS(Embedded javaScript templates)
+
+-->> EJS is a simple templating language that lets you generate HTML markuo with plain javaScript.
+
+
+// similar layout bhut baar create ho raha hotaa taab hum baar baar page create nahi karte html kaa use kaar ke 
+
+// hum blueprint bnaate hai
+
+hum EJS tool kaa use karenge templete baane ke liye
+
