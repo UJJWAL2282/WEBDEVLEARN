@@ -1,0 +1,8 @@
+//----------------MiddleWare-----------------------------------
+
+It is an intermediary
+
+Request-------->middleware------->response
+
+
+
