@@ -1,0 +1,19 @@
+--------------------Faker---------------------------------------------------
+
+To generate fake data
+
+userId  username email password
+
+
+let getUser =()=>{
+    return [
+        faker.datatype.uuid(),
+        faker.internet.userName(),
+        faker.internet.email(),
+        faker.internet.password(),
+    ];
+};
+
+
+
+// use this in command line "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql" -u root -p
