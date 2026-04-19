@@ -1,0 +1,33 @@
+//----------------------REST------------------------------------------
+Respresentational State Transfer
+
+REST is an architectural style that defines a set of constraints to be used for creating web services.
+
+yaa set of rule detaa hai api ko create karne ke liye.
+
+REST API generally CRUD operation karne ke liye kiyaa jataa hai c-create r-read u-padate d-delete
+
+//read stackoverflow.blog on REST
+
+
+
+//---------------------CRUD Operation-------------------------------------------------
+
+GET-retrives resources.
+POST-submits new data to the server
+PUT-Update existing data
+PATCH-Update existing data partially
+DELETE-remove data
+
+
+
+//------------------Create RESTful APIs------------------------------------------------------------
+
+
+GET ---  /posts       to get data for all posts
+POST --- /posts       to add a new posts
+GET ---  /post/:id    to get one post(using id)
+PATCH -- /posts/:id    to update specific post
+DELETE -- /posts/:id   to delete specific post
+
+
