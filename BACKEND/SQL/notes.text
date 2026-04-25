@@ -1,0 +1,405 @@
+---------------What is database?-------------------
+It is a collection of data in a format that can be easily accessed.
+
+
+SQL is a language to access database.
+
+
+why database?
+
+>> can store large data
+
+>> features like security, scalabilty etc.
+
+>> Easier to insert,update or delete data.
+
+
+
+
+
+SQL   v/s   NoSQL 
+
+===> SQL   
+--> Relational Database (data stored in Tables).
+
+
+
+eg-MySQL,Oracle,Postgre etc
+
+
+
+==>NoSQL
+
+-->Non Relational Database. (data stored in document/key-val/graphs etc)
+
+eg-MongoDb,Cassandra,Neo4j etc.
+
+
+
+
+
+---------------------SQL (structured Query Language)----------------------------------------------
+
+SQL is a programming languange used to interact with relational databases.
+
+
+
+
+
+
+
+------------------------What is Table in SQL-------------------------------------------------
+
+// columns ----> design (schema) [id,name,email,followers,following]
+//rows -tuple (Single row)
+
+// isme unique id hotaa hai
+
+
+
+
+
+----------------Our 1st Database----------------------------------------
+
+create ---> DATABASE db_name;
+
+Drop  ----> DATABASE db_name;
+
+USE db_name;
+
+
+SQL case insensentive
+
+
+
+
+
+
+
+--------------------Our 1st Table_--------------------------------------------------
+
+
+CREATE TABLE table_name(
+    column_name1 datatype constraint,
+    column_name2 datatype constraint,
+    column_name3 datatype constraint        constraint---rule hotaa and optional hotaa hai
+
+)
+
+
+
+string ko VARCHAR(size) aise likhte hai
+
+
+
+
+
+//--> TO insert in table 
+
+INSERT INTO table_name
+
+VALUES
+(101,adam,12),
+..,
+...,
+....;
+
+
+//--> TO Check DATA
+
+SELECT * FROM table_name;
+
+
+
+--------------------------------Database Queries---------------------------------------------------------------
+
+CREATE DATABASE db_name;
+CREATE DATABASE IF NOT EXISTS db_Name;
+
+
+
+DROP DATABASE db_name;
+DROP DATABASE IF EXISTS db_name;
+
+
+SHOW DATABASES;
+SHOW TABLES;
+
+
+
+----------------------Table Queries-----------------------------------------------------------------------------------------
+
+-->>create
+-->>insert
+-->>update
+-->>Alter
+-->>Truncate  ---->table ke andar kaa sara data delete kaar dena.
+-->>Delete
+
+
+
+
+---------------------constraints--------------------------------------------------------
+
+-->Rule  for data in table.
+
+NOT NULL -->specific value null naa ho uske liye
+UNIQUE  --> data me uniqueness laage ke liye
+DEFAULT --> SET default value to columns
+CHECK  --> It can limit the value allowed in column
+
+syntax:
+
+CONSTARNT age_check CHECK (age >=18 AND city ="Delhi")
+
+
+PRIMART KEY ---> makes a column unique and not null but used only for one 
+
+     CREATE TABLE temp(
+        id int not null,
+        PRIMARY KEY (id)
+     );
+
+
+FOREIGN KEY   ---> prevent action that would destroy links between tables 
+
+    CREATE TABLE temp(
+        cust_id int,
+        FOREIGN KEY (cust_id) references customer(id)
+    );
+
+
+
+
+-----------------------------What are Keys?---------------------------------------------------------------------
+
+key are special columns in the table
+
+Primary Key
+
+It is a column (or set of columns) in a table that uniquely identifies each row.(a unique id)
+There is only 1PK & it should be NOT null.
+
+
+Foeign key
+
+A forigen key is a column (or set of columns) in a table that refers to the primary key .
+can be dublicate or null.
+
+
+
+
+
+--------------------------------Insert into Table------------------------------------------------------------------------------
+
+--> Insert into Table
+
+INSERT INTO table_name
+(colname1,colname2)
+VALUES
+(col1_v1,col2_v1),
+(col1_v2,col2_v2);
+
+
+
+----------------------------SELECT command--------------------------------------------
+
+select & show data from the dB 
+
+syntax:
+
+SELECT col1,col2 FROM table_name;
+
+syntax(to show all):
+
+SELECT * FROM table_name;
+
+
+
+
+
+
+------------------------Where Clause------------------------------------------------------------------------
+
+//To define some conditions
+
+SELECT col1,col2 FROM table_name
+WHERE conditions;
+
+
+----------------------Operators in Where-----------------------------------------------------
+
+Arithmetic
+logical
+bitwise
+compaeison
+
+
+
+--------------------Frequently used Operators---------------------------------------
+
+AND (to check for both conditions to be true)
+OR(to check for one of the conditions to be true)
+BETWEEN(selects for a given range)
+IN(matches any value in the list)
+NOT(to negate the given condition)
+
+
+
+--------------------Limit clause------------------------------------------------
+
+Sets an upper limit on number of(tuples) rows to be returned
+
+
+SELECT col1,col2 FROM table_name
+LIMIT number;
+
+
+
+
+--------------------Order by Clause---------------------------------------------------------
+
+To sort in ascending (ASC) or descending order (DESC)
+
+SELECT col1,col2 FROM table_name
+ORDER BY col_name(s) ASC;
+
+
+
+---------------Aggregate Functions-------------------------------------------------
+
+Aggregate functions perform a calculation on a set of values,return a single value.
+
+-->COUNT()
+-->MAX()
+-->MIN()
+-->SUM()
+-->AVG()
+
+
+Example:
+
+SELECT max(marks)
+FROM student;
+
+
+
+------------------------------GROUP BY CLAUSE------------------------------------------------------------
+
+
+Groups rows that have the same values into summary rows.
+It collects data from multiple records and groups the result by one or more column.
+
+
+SELECT col1,col2
+FROM table_name
+GROUP BY col_name(s);
+
+
+*Generally we use group by with some aggregation function.
+
+
+
+
+
+
+----------------------------------------------------Having Clause-------------------------------------------------------------------------------------------------------------------
+
+
+Similar to Where i.e applies some condition on rows.
+But it is used when we want to apply any condition after grouping.
+
+
+SELECT col1,col2
+FROM table_name
+GROUP BY col_name(s)
+Having condition;
+
+
+-->WHERE is for the table, HAVING is for group
+-->Grouping is necessary for HAVING
+
+
+
+------------------------------------------------General Order-------------------------------------------------------------------------------------------------------------------------
+
+
+SELECT column(s)
+FROM table_name
+WHERE condition
+GROUP BY columns(s)
+HAVING condition
+ORDER BY column(s) ASC;
+
+
+
+
+-------------------------------------------Table Queries--------------------------------------------------------------------------------------------------------------------------------------------
+
+-->Update (to update existing rows)
+
+UPDATE table_name
+SET col1=val1,col2=val2
+WHERE condition;
+
+
+directly hum update nahi kaar sakte uske liye yaak line likna hotaa 
+SET SQL_SAFE_updates=0;
+
+
+
+
+-->>DELETE (to delete existiing rows)<<------------------
+
+DELETE FROM table_name
+WHERE condition;
+
+
+
+
+----->Alter  (to change the schema)<<--------
+
+
+-->ADD column
+
+ALTER TABLE table_name
+ADD COLUMN column_name datatype constraint;
+
+
+-->DROP column
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+
+-->RENAME Table
+
+ALTER TABLE table_name
+RENAME TO new_table_name;
+
+-->CHANGE column (rename)
+
+ALTER TABLE table_name
+CHANGE COLUMN old_name new_name new_datatype new_constraint;
+
+
+-->MODIFY Column (modify datatype/constraint)
+
+ALTER TABLE table_name
+MODIFY col_name new_datatype new_constraint;
+
+
+-->Truncate (to delete table's data)
+
+TRUNCATE TABLE table_name;
+
+
+
+
+
+
+
+
+
+
+
